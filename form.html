@@ -1,0 +1,32 @@
+
+<html>
+<body>
+<head>
+<script type="text/javascript">
+        function check_field(id) {
+            var field = document.getElementById(id);
+             
+            if (isNaN(field.value)
+
+              ||   ( document.my_form.phone.value.length!=10))
+			{
+                alert('Enter a valid mobile no');
+				return false;
+            }
+			return true;
+        }
+</script>
+</head>
+<form name="my_form" action = "get_input.php" method="POST">
+Choose a Cake 
+
+     <input type="text" name="cake" />
+	<br/></br>
+	
+	Enter Your Phone Number
+	<input type="text" name="phone" id="t_field" placeholder="mobile no" min="10" maxlength="10" />
+	<br/>
+	<input type = "submit" name="button" value = "Submit"  onclick="check_field('t_field');" >
+</form>
+</body>
+</html>
